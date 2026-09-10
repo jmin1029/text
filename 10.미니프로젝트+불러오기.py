@@ -400,6 +400,7 @@ class LottoGame:
         return self.lotto_auto(lottery_total)
 
     # 1. lotto.txt 파일에 [아이디,번호1,번호2,번호3,번호4,번호5,번호6] 저장
+    
     def save_lotto(self, id, lotto_numbers):
         # 숫자를 문자로 바꿔서 쉼표로 연결합니다.
         line = f"{id}"
@@ -423,6 +424,8 @@ class LottoGame:
                 data = line.strip().split(",")
                 
                 # 맨 앞의 ID가 현재 찾는 ID와 같다면
+                 # 아이디를 딕셔너리를 키로 가지고 리스트가 추가되는 방법을 하려고 했으나
+                    # 딕셔너리를 불러오는 방법을 몰라서 이 방법을 채택함.
                 if data[0] == id:
                     count += 1
                     print(f"{count}번째 이력: ", end="")
