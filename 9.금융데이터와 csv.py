@@ -41,4 +41,4 @@ for stock in stocks:
 
 average = total / len(stocks)
 
-print(f"평균가격 : {average:,.0f}원")
+print(f"평균 price : {average:,.0f}원")
